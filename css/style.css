@@ -1,0 +1,116 @@
+body{
+    background-color: #F2F2F2;
+    color:rgb(74, 74, 74);
+    font-size : 100%;
+    line-height:100%;
+    margin:0px;
+}
+
+
+#container{
+    display: block;
+    width:80%;
+    margin: 0 auto;
+    font-family: TestFont , Raleway;
+}
+
+
+header{
+    display:flex;
+    flex-direction:row;
+    background : #444242;
+    height: 70px;
+    box-shadow: 0px 2px 4px 1px #999;
+}
+
+header .logobox{
+    background: #ff007e;
+    padding:0 20px;
+    color:#fff;
+    display: flex;
+    align-items: center;
+}
+
+header .logobox span{
+    line-height:1;
+}
+
+
+header .toolbox {
+    display:flex;
+    flex:1;
+}
+
+.UnitTest{
+    background-color:#fefefe;
+    
+    box-shadow: 0px 2px 4px 1px #999;
+    padding:50px;
+    margin:50px 0%;
+            font-size : 1em;
+        line-height:1.6em;
+    
+}
+
+
+.UnitTest .titr{
+    
+    
+    display:block;
+    font-weight:700;
+    font-size: 1.4em;
+    
+}
+
+.UnitTest .so-titr{
+     margin-top:20px;
+    display:block;
+    border-right:5px solid #ccc;
+    padding-right:10px;
+    font-size: 1.1rem;
+    margin-left:20px;
+    margin-right:20px;
+    
+}
+
+
+.UnitTest  .para{
+    
+    margin: 50px 10px;
+    color:#535353;
+    text-indent:5%;
+    line-height:1.9;
+    
+
+}
+
+.UnitTest .multicolumn{
+    display:block;
+-moz-column-count: 3;
+-moz-column-gap: 40px;
+}
+
+.UnitTest .multicolumn h3{
+    font-weight:700;
+    margin:0px;
+    display:block;
+}
+
+.UnitTest .multicolumn > div + div{
+    margin-top:50px;
+}
+
+.UnitTest .multicolumn p{
+    
+    
+     font-weight:400;
+     text-indent:10%;
+     text-align :justify;
+     color:#535353;
+     margin:10px 0 0 0;
+}
+
+
+#FarsiPanel{
+
+}
