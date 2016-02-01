@@ -8,30 +8,17 @@ function changeSize() {
 
 	var testPanel = $('#TestPanel');
     var ss = window.sessionStorage;
-	var textBox = ss.getItem('TestPanel.lang') || 'me';
+	var size = $('.textSize', testPanel);
+	var size = $('.textSize', testPanel);
 	var key = $(this).parent().attr('id');
-	
+	var langs = $("input[name='lang']");
 	
 	var Box = $('.boxContainer',testPanel);
 
 		//if (window.sessionStorage.getItem(key+'.total') != null) $('.total', this).val(window.sessionStorage.getItem(key+'.total'))
 		//if (window.sessionStorage.getItem(key+'.size') != null) $('.size', this).val(window.sessionStorage.getItem(key+'.size'))	
 		
-		$('.resetTextFA',TestPanel).click(function(){
-			ss.setItem('test.lang','FA')	
-			refreshText()
-		});
-    
-	    $('.resetTextAR',testPanel).click(function(){
-			ss.setItem('test.lang','AR')
-			refreshText()
-		});
 
-
-	    function refreshText(){
-	    	var lang = ss.getItem('test.lang');
-
-	    }
 		// size.on('input',function() {
 			// setSize(box)
 			// window.sessionStorage.setItem(key+'.size',$(this).val());
@@ -65,18 +52,28 @@ function changeSize() {
 			$('.'+textBox, Box).toggle('show');
 		 }
 
-		 setText();
-		 $('.textSize').on('input',function() {
+		 
+		 size.on('input',function() {
 		 	var val = $(this).val();
 		 	Box.css('font-Size', val+'px');
-			 ss.setItem(key+'.size',$(this).val());
+			 ss.setItem('TestPanel.size',val);
 		 });
 
 
-		 $("input[name='lang']").change(function(){
+		 langs.change(function(){
 		 	var x = $(this).val();
+		 	ss.setItem('TestPanel.lang',x);
 		 	Box.find('.'+x).show().siblings().hide();
 		 })
+
+
+
+		 function refresh(){
+		 	var lang = ss.getItem('TestPanel.lang') || 'fa';
+		 	var _size = ss.getItem('TestPanel.size') || '40';
+		 	 langs.filter('[value='+lang+']').prop('checked', true).triggerHandler('change');
+		 	 size.prop('value',_size).triggerHandler('input');
+		 }
 		// function setSize(container){
 			// var total =  $('.total',container).val();
 			// var size =  $('.size',container)[0].value;
@@ -93,7 +90,7 @@ function changeSize() {
 	// });
 	//$('.total', cs).triggerHandler('change');
 
-
+	refresh();
 }
 
 
