@@ -4,13 +4,12 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<title>	تست فونت فارسی</title>
-	<script type="text/javascript" src="js/jquery-2.1.4.minjs"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+
     
     <link rel="stylesheet" href="css/normalize.css" >
     <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="fonts/test-font.css" >
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    
 
 </head>
 <body>
@@ -23,15 +22,112 @@
         </div>
     </header>
 	<div id="container">
-    
-        <section id="FarsiPanel" class="UnitTest">
+        <section id="TestPanel" class="UnitTest">
+            <div class="side-top">
+                <div class="features">
+                   <div class="props">
+                        <div class="field-box">
+                            <input name="kern"  class="custom-checkbox" id="kern" type="checkbox">
+                            <label for="kern">کرنینگ</label>
+                        </div>
+                        <div class="field-box">
+                            <input name="swash"  class="custom-checkbox" id="swash" type="checkbox">
+                            <label for="swash">کشیدگی</label>
+                        </div>
+                    </div>     
+
+                    <div class="Stylistic">
+                        <div class="field-box">
+                            <input name="ss01"  class="custom-checkbox" id="ss01" type="checkbox">
+                            <label for="ss01">ss01</label>
+                        </div>
+                        <div class="field-box">
+                            <input name="ss02" class="custom-checkbox"  id="ss02" type="checkbox">
+                            <label for="ss02">ss02</label>
+                        </div>
+                        <div class="field-box">
+                            <input name="ss03"  class="custom-checkbox" id="ss03" type="checkbox">
+                            <label for="ss03">ss03</label>
+                        </div>
+                        <div class="field-box">
+                            <input name="ss04"   class="custom-checkbox" id="ss04" type="checkbox">
+                            <label for="ss04">ss04</label>
+                        </div>
+                        <div class="field-box">
+                            <input name="ss05"  class="custom-checkbox" id="ss05" type="checkbox">
+                            <label for="ss05">ss05</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="vars">
+                    
+                    <div class="field-box">
+                        <label>سایز</label>
+                        <input class="textSize" type="range" min="1" max="500" value="70" step="1">
+                    </div>
+                    <div class="field-box" style="flex:0 1 auto;">
+                        <label>سایه</label>
+                        <input class="size" type="range" min="0" max="20" value="0" step="1">
+                    </div>
+
+                    <div class="field-box" style="flex:0 1 auto;">
+                        <label>آسیتماتیک</label>
+                        <input class="size" type="range" min="0" max="2" value="0" step="0.1">
+                    </div>
+                </div>
+
+
+            </div>
+                <div class="boxContainer grid-line">
+                    <p class="fa">کلاغ فرز و چابک، ظهر هر روز با صدای ضخیم و عذاب‌ آورش، ب‍ه جستجوی یک مثقال گنج پنهان، در حیاط رژه می رفت و مژگانش که خواب از آن همچنان نپریده بود! معمار دوید و با شیرجه زنان به سمتش گریست و پرواز کرد با صدای خارچ و چروخ<p>
+                    <p class="ar">قَالَ عِيسَى بْنُ هِشَامٍ، فَانَلْتُهُ مَا تَاحَ. وَأَعْرَضَ عَنَّا فَرَاحَ. فَجَعَلْتُ أَنْفيهِ وَأُثْبتُهُ، وَأَنْكِرُهُ وَكَأَنِّي أَعْرِفُهُ، ثُمَّ دَلَّتْنِي عَلَيهِ ثَنَاياهُ، فَقُلْتُ: الإِسْكَنْدَريُّ وَاللَّهِ، فَقَدْ كَانَ فَارَقَنَا خِشْفًا، وَوَافانا جِلْفًا، وَنَهَضْتُ عَلى إِثرِهِ، ثَمَّ قَبَضْتُ عَلَى خَصْرِهِ، وَقُلْتُ: أَلَسْتَ أَبَا الفَتْحِ؟ أَلَمْ نُرَبِّكَ فِينا وَلِيدًا وَلَبِثْتَ فِينا مِنْ عُمُرِكَ سِنِينَ؟ فَأَيُّ عَجُوزِ لَكَ بِسُرَّ مَنْ رَا فَضَحِكَ إِليَّ وَقَالَ"</p>
+                    <p class="me " contenteditable=true>وارد کنید</p>                           
+                </div>
+            <div class="side-bottom">
+                <div class="changeLang">
+                    <div class="field-box">
+                        <input value="me" class="custom-checkbox" id="me" name="lang" type="radio">
+                        <label for="me">سفارشی</label>
+                    </div>
+                    <div class="field-box">
+                        <input value="fa" class="custom-checkbox" id="fa" name="lang" type="radio">
+                        <label for="fa">فارسی</label>
+                    </div>
+                    <div class="field-box">
+                        <input value="ar" class="custom-checkbox" id="ar" name="lang" type="radio">
+                        <label for="ar">عربی</label>
+                    </div>
+                    <div class="field-box">
+                        <input value="urdu" class="custom-checkbox" id="urdu" name="lang" type="radio">
+                        <label for="urdu">اردو</label>
+                    </div>
+                    <div class="field-box">
+                        <input value="pashto" class="custom-checkbox" id="pashto" name="lang" type="radio">
+                        <label for="pashto">دشتو</label>
+                    </div>
+                </div>
+                <div class="animations">
+                                    <a class="fa">دلخواه</a>
+                    <a class="fa">عربی</a>
+                    <a class="ar">فارسی</a>
+                </div>
+
+            </div>                
+        </section>
+
+
+        <section id="FarsiPanel" class="UnitTest hide">
+        
+
+        
             <span class="titr" contenteditable="true">یک فونت استاندارد  باید هم از نظر طراحی {design} و هم اجرای نرم‌افزاری [Software] کاملاً استاندارد باشد.</span>
             <span class="so-titr" contenteditable="true">
 با نگاه عمیق‌تر به قلم و کیفیت خوانایی آن و اثر آن بر روی مخاطب، ناچار باید بپذیریم که تایپوگرافی و حروف‌چینی یک متن به رعایت اصول و ضوابط طراحی قلم بیشتر نیازمند است تا مسائل طراحی گرافیک.            
         </span>
-        <p class="para" contenteditable="true">
-            استفاده از قلم مناسب راحت خوانده شدن را به خواننده هدیه می‌کند و بی آن‌که خواننده حس کند که طراح در تنظیم حروف‌چینی هنرنمایی کرده است، محیط مناسبی برای خوانایی او ایجاد می‌شود. استفاده از قلم مناسب در یک متن به‌ضرورت نظر دارد و نه به هنر. ما از خواندن بسیاری از متن‌ها لذت می‌بریم، بی آن‌که شیفتهٔ شکل خاص طراحی قلم بشویم، یا حتی ظرایف طراحی آن در ذهن ما حک شود. واقعیت این است که پس از گذشت سال‌ها از ورود کامپیوتر و حروف‌چینی دیجیتال، هنوز قلم‌های مناسب برای متن، همان قلم‌هایی هستند که الگوی طراحی آن‌ها خط نسخ بوده است، که شامل قلم‌های لوتوس، نازنین، میترا، بدر و چند قلم دیگر است که ضخامت مناسبی برای استفاده در سطرهای متوالی دارند. اگرچه تنوع قلم در نرم‌افزارهای جدید فارسی رو به افزایش است اما لازم به توجه است که در هر یک از این نرم‌افزارها فقط چهار یا پنج قلم مناسب برای متن می‌توان یافت. قلم‌هایی که با فرم‌های تزیینی، دست خط و یا فرم‌های خاص و آزاد طراحی شده‌اند، هیچ‌یک برای کاربرد در یک متن مناسب نیستند. فرم خاص حروف قلم‌های ذکرشده علاوه بر آن‌که برای خوانده شدن متن را دشوار می‌کند، از وقار و تشخص صورت بیرونی متن می‌کاهد. بنابراین لازم است گزینش نوع قلم متن با توجه به محتوا با جدیت و دقت نظر بیشتری انجام گیرد.
-        </p>
+
+        <br>
         <div    class="multicolumn">
         
                         <div class="box1" contenteditable="true">
@@ -87,7 +183,21 @@
 
         </section>
     
-        <section id="arabiPanel" class="UnitTest">
+        <section id="arabiPanel" class="UnitTest hide">
+                    <div class="TextSizeCompaire" >
+                <div class="controlBox">
+                    <div>
+                        <input class="size" type="range" min="1" max="100" value="0">
+                    </div>
+                    <div>
+                        <input class="total" type="number" value="5">
+                    </div>
+                </div>
+                <div class="boxContainer">
+                            
+                </div>
+            </div>
+
             <span class="titr" contenteditable="true">یحَدّثَنَا عِيسَى بْنُ هِشَامٍ قَالَ:</span>
             <span class="so-titr" contenteditable="true">
 قَالَ عِيسَى بْنُ هِشَامٍ، فَانَلْتُهُ مَا تَاحَ. وَأَعْرَضَ عَنَّا فَرَاحَ. فَجَعَلْتُ أَنْفيهِ وَأُثْبتُهُ، وَأَنْكِرُهُ وَكَأَنِّي أَعْرِفُهُ، ثُمَّ دَلَّتْنِي عَلَيهِ ثَنَاياهُ، فَقُلْتُ: الإِسْكَنْدَريُّ وَاللَّهِ، فَقَدْ كَانَ فَارَقَنَا خِشْفًا، وَوَافانا جِلْفًا، وَنَهَضْتُ عَلى إِثرِهِ، ثَمَّ قَبَضْتُ عَلَى خَصْرِهِ، وَقُلْتُ: أَلَسْتَ أَبَا الفَتْحِ؟ أَلَمْ نُرَبِّكَ فِينا وَلِيدًا وَلَبِثْتَ فِينا مِنْ عُمُرِكَ سِنِينَ؟ فَأَيُّ عَجُوزِ لَكَ بِسُرَّ مَنْ رَا فَضَحِكَ إِليَّ وَقَالَ:        </span>
@@ -136,8 +246,8 @@
         </section>
         
     </div>
-    <script type='text/javascript' id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.10.0.js'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
