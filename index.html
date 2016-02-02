@@ -24,73 +24,89 @@
 	<div id="container">
         <section id="TestPanel" class="UnitTest">
             <div class="side-top">
-                <div class="features">
-                   <div class="props">
-                        <div class="field-box">
-                            <input name="kern"  class="custom-checkbox" id="kern" type="checkbox" checked="checked">
-                            <label for="kern">کرنینگ</label>
-                        </div>
-                        <div class="field-box">
-                            <input name="swash"  class="custom-checkbox" id="swash" type="checkbox">
-                            <label for="swash">کشیدگی</label>
-                        </div>
-                    </div>     
-
-                    <div class="Stylistic">
-                        <div class="field-box">
-                            <input name="ss01"  class="custom-checkbox" id="ss01" type="checkbox">
-                            <label for="ss01">ss01</label>
-                        </div>
-                        <div class="field-box">
-                            <input name="ss02" class="custom-checkbox"  id="ss02" type="checkbox">
-                            <label for="ss02">ss02</label>
-                        </div>
-                        <div class="field-box">
-                            <input name="ss03"  class="custom-checkbox" id="ss03" type="checkbox">
-                            <label for="ss03">ss03</label>
-                        </div>
-                        <div class="field-box">
-                            <input name="ss04"   class="custom-checkbox" id="ss04" type="checkbox">
-                            <label for="ss04">ss04</label>
-                        </div>
-                        <div class="field-box">
-                            <input name="ss05"  class="custom-checkbox" id="ss05" type="checkbox">
-                            <label for="ss05">ss05</label>
-                        </div>
+                <div id="features" class="side-row">
+                    <div class="field-box">
+                        <input name="feature[]" value="kern" class="custom-checkbox features-input" id="kern" type="checkbox" >
+                        <label for="kern">کرنینگ</label>
                     </div>
+                    <div class="field-spiliter"></div>
+                    <div class="field-box">
+                        <input name="feature[]" value="liga" class="custom-checkbox features-input" id="liga" type="checkbox" >
+                        <label for="liga">لیگچرها</label>
+                    </div>
+                    <div class="field-box">
+                        <input name="feature[]"  value="calt" class="custom-checkbox features-input" id="calt" type="checkbox">
+                        <label for="calt">لیگچر‌های فرعی</label>
+                    </div>
+                    <div class="field-box">
+                        <input name="feature[]"  value="dlig" class="custom-checkbox features-input" id="dlig" type="checkbox">
+                        <label for="dlig">لیگچر‌های اضافه</label>
+                    </div>
+                    <div class="field-spiliter"></div>
+                    <div class="field-box">
+                        <input name="feature[]"  value="swsh" class="custom-checkbox features-input" id="swsh" type="checkbox">
+                        <label for="swsh">کشیدگی‌ها</label>
+                    </div>
+
+                    <div class="field-spiliter"></div>
+                    <div class="field-box">
+                        <input name="feature[]" value="ss01" class="custom-checkbox" id="ss01" type="checkbox">
+                        <label for="ss01">ss01</label>
+                    </div>
+                    <div class="field-box">
+                        <input name="feature[]" value="ss02" class="custom-checkbox"  id="ss02" type="checkbox">
+                        <label for="ss02">ss02</label>
+                    </div>
+                    <div class="field-box">
+                        <input name="feature[]" value="ss03" class="custom-checkbox" id="ss03" type="checkbox">
+                        <label for="ss03">ss03</label>
+                    </div>
+                    <div class="field-box">
+                        <input name="feature[]"  value="ss04" class="custom-checkbox" id="ss04" type="checkbox">
+                        <label for="ss04">ss04</label>
+                    </div>
+                    <div class="field-box">
+                        <input name="feature[]" value="ss05" class="custom-checkbox" id="ss05" type="checkbox">
+                        <label for="ss05">ss05</label>
+                    </div>
+
                 </div>
 
 
-                <div class="vars">
+                <div  id="vars" class="side-row">
                     
                     <div class="field-box">
                         <label>سایز</label>
                         <input class="textSize" type="range" min="1" max="500" value="70" step="1">
                     </div>
+                      <div class="field-spiliter"></div>
                     <div class="field-box" style="flex:0 1 auto;">
                         <label>سایه</label>
-                        <input class="shadow" type="range" min="0" max="20" value="0" step="1">
+                        <input class="shadow" type="range" min="0" max="20" value="0" step="0.5">
                     </div>
-
+                    <div class="field-spiliter"></div>
                     <div class="field-box" style="flex:0 1 auto;">
                         <label>آسیتماتیک</label>
-                        <input class="blur" type="range" min="0" max="2" value="0" step="0.1">
+                        <input class="blurRange" type="range" min="0" max="5" value="0" step="0.1">
                     </div>
                 </div>
 
 
             </div>
-                <div class="boxContainer grid-line">
-                    <p class="fa">کلاغ فرز و چابک، ظهر هر روز با صدای ضخیم و عذاب‌ آورش، ب‍ه جستجوی یک مثقال گنج پنهان، در حیاط رژه می رفت و مژگانش که خواب از آن همچنان نپریده بود! معمار دوید و با شیرجه زنان به سمتش گریست و پرواز کرد با صدای خارچ و چروخ<p>
-                    <p class="ar">قَالَ عِيسَى بْنُ هِشَامٍ، فَانَلْتُهُ مَا تَاحَ. وَأَعْرَضَ عَنَّا فَرَاحَ. فَجَعَلْتُ أَنْفيهِ وَأُثْبتُهُ، وَأَنْكِرُهُ وَكَأَنِّي أَعْرِفُهُ، ثُمَّ دَلَّتْنِي عَلَيهِ ثَنَاياهُ، فَقُلْتُ: الإِسْكَنْدَريُّ وَاللَّهِ، فَقَدْ كَانَ فَارَقَنَا خِشْفًا، وَوَافانا جِلْفًا، وَنَهَضْتُ عَلى إِثرِهِ، ثَمَّ قَبَضْتُ عَلَى خَصْرِهِ، وَقُلْتُ: أَلَسْتَ أَبَا الفَتْحِ؟ أَلَمْ نُرَبِّكَ فِينا وَلِيدًا وَلَبِثْتَ فِينا مِنْ عُمُرِكَ سِنِينَ؟ فَأَيُّ عَجُوزِ لَكَ بِسُرَّ مَنْ رَا فَضَحِكَ إِليَّ وَقَالَ"</p>
-                    <p class="me " contenteditable=true>وارد کنید</p>                           
+                <div class="boxContainer ">
+                    <div id="TextContainer">
+                        <p class="fa">کلاغ فرز و چابک، ظهر هر روز با صدای ضخیم و عذاب‌ آورش، ب‍ه جستجوی یک مثقال گنج پنهان، در حیاط رژه می رفت و مژگانش که خواب از آن همچنان نپریده بود! معمار دوید و با شیرجه زنان به سمتش گریست و پرواز کرد با صدای خارچ و چروخ<p>
+                        <p class="ar">قَالَ عِيسَى بْنُ هِشَامٍ، فَانَلْتُهُ مَا تَاحَ. وَأَعْرَضَ عَنَّا فَرَاحَ. فَجَعَلْتُ أَنْفيهِ وَأُثْبتُهُ، وَأَنْكِرُهُ وَكَأَنِّي أَعْرِفُهُ، ثُمَّ دَلَّتْنِي عَلَيهِ ثَنَاياهُ، فَقُلْتُ: الإِسْكَنْدَريُّ وَاللَّهِ، فَقَدْ كَانَ فَارَقَنَا خِشْفًا، وَوَافانا جِلْفًا، وَنَهَضْتُ عَلى إِثرِهِ، ثَمَّ قَبَضْتُ عَلَى خَصْرِهِ، وَقُلْتُ: أَلَسْتَ أَبَا الفَتْحِ؟ أَلَمْ نُرَبِّكَ فِينا وَلِيدًا وَلَبِثْتَ فِينا مِنْ عُمُرِكَ سِنِينَ؟ فَأَيُّ عَجُوزِ لَكَ بِسُرَّ مَنْ رَا فَضَحِكَ إِليَّ وَقَالَ"</p>
+                        <p class="me" contenteditable=true>وارد کنید</p>                           
+                    </div>
                 </div>
             <div class="side-bottom">
-                <div class="changeLang">
+                <div  id="changeLang" class="side-row">
                     <div class="field-box">
                         <input value="me" class="custom-checkbox" id="me" name="lang" type="radio">
                         <label for="me">سفارشی</label>
                     </div>
+                     <div class="field-spiliter"></div>
                     <div class="field-box">
                         <input value="fa" class="custom-checkbox" id="fa" name="lang" type="radio">
                         <label for="fa">فارسی</label>
@@ -107,11 +123,23 @@
                         <input value="pashto" class="custom-checkbox" id="pashto" name="lang" type="radio">
                         <label for="pashto">دشتو</label>
                     </div>
+    
                 </div>
-                <div class="animations">
-                                    <a class="fa">دلخواه</a>
-                    <a class="fa">عربی</a>
-                    <a class="ar">فارسی</a>
+                <div id="options" class="side-row">
+                
+                    <div class="field-box">
+                        <input value="baseline" class="custom-checkbox" id="baseline" name="baseline" type="checkbox">
+                        <label for="baseline">کرسی</label>
+                    </div>
+                    <div class="field-spiliter"></div>
+                    <div class="field-box">
+                        <input value="normal" class="custom-checkbox" id="pre" name="linetype" type="radio">
+                        <label for="pre">پراگراف</label>
+                    </div>
+                    <div class="field-box">
+                        <input value="nowrap" class="custom-checkbox" id="nowrap" name="linetype" type="radio">
+                        <label for="nowrap">خطی</label>
+                    </div>
                 </div>
 
             </div>                
