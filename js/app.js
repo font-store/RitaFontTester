@@ -92,7 +92,7 @@ function changeSize() {
 		 function refresh(){
 		 	var _lang = ss.getItem('TestPanel.lang') || 'fa';
 		 	var _size = ss.getItem('TestPanel.size') || '40';
-		 	var _lineType = ss.getItem('TestPanel.lineType') || 'pre';
+		 	var _lineType = ss.getItem('TestPanel.lineType') || 'normal';
 		 	var _shadow = ss.getItem('TestPanel.shadow') || 0;
 		 	var _blur = ss.getItem('TestPanel.blur') || 0;
 		 	var _text = ss.getItem('TestPanel.text') || 'متن دلخواه شما';
@@ -136,6 +136,7 @@ function changeSize() {
 			 Blur.prop('value',_blur)
 			textStyles['text-shadow'] = 'initial';
 			textStyles['filter'] = "initial";
+			langs.filter('[value='+_lineType+']').prop('checked', true);
 			Box.find('p').css('white-space', _lineType);
 		 		textStyles['-webkit-filter'] = "initial";
 		 	if(_shadow != 0 ){

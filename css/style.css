@@ -10,6 +10,7 @@ height: 100vh;
 }
 
 
+
 #container{
     display: flex;
     flex-direction:column;
@@ -23,9 +24,10 @@ height: 100vh;
 header{
     display:flex;
     flex-direction:row;
-    flex:0;
+    flex:0 0 auto;
     background : #444242;
-    height: 70px;
+    height: 90px;
+    position: relative;
     box-shadow: 0px 2px 4px 1px #999;
 }
 
@@ -35,17 +37,75 @@ header .logobox{
     color:#fff;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
-header .logobox span{
+header .logobox .t1,.t2{
     line-height:1;
+    font-family: Lalezar;
+    font-size: 40px;
+    
+    font-weight: 400;
+        display: block;
+        width: 100%;
+
+}
+ .logobox .t1{
+
+color: bisque;
+line-height: 0.8;
+text-shadow: 1px 1px 2px rgb(69, 69, 69);
+}
+ .logobox .t2{
+  color: #fff;
+   text-align: center;
+   font-size: 60px;
+   line-height: 0.5;
+   text-shadow:0px 2px 1px #666,2px 0px 1px #666;
 }
 
 
-header .toolbox {
-    display:flex;
-    flex:1;
+header #toolbox {
+    display:block;
+    position: relative;
+    height: 100%;  
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    
 }
+
+
+ #toolbox a{
+    display: inline-block;
+    position: relative;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    height: inherit;
+}
+
+ #toolbox a.active{
+  background-color: #000;
+ }
+
+ #toolbox .spilit{
+background-color: rgba(215, 163, 59, 0.5);
+content: '';
+display: inline-block;
+width: 2px;
+height: inherit;
+position: relative;
+
+ }
+
+ #toolbox a:hover{
+  background-color: #1d6da1;
+ }
+  #toolbox a img{
+    display: block;
+    height: 100%;
+  }
+
 
 .UnitTest{
     background-color:#fefefe;
@@ -318,3 +378,13 @@ clip: rect(0,0,0,0);
   color: #444;
   text-shadow: 0 1px 0 #fff;
 }
+
+
+
+
+  @font-face {
+      font-family: 'Lalezar';
+      src: url('Lalezar-Display.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
