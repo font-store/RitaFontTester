@@ -211,8 +211,8 @@ label{
   display: flex;
 
   flex:1;
-  flex-basis:0;
-  overflow: auto;
+  flex-basis:1;
+//  overflow: auto;
     box-shadow: 0px 0px 14px -3px #aaa inset;
   
 }
@@ -221,14 +221,20 @@ label{
   display: flex;
 }
 
-#TextContainer p{
+#TextContainer > p{
   display: none;
-  flex:1;
+  flex:0;
+
   margin: 0px;
   padding: 0px 20px;
     line-height: 1.6em;
     text-rendering:optimizelegibility;
+  position: relative;
+}
 
+#TextContainer .show{
+  flex:1;
+  display: block;
 }
 .nowrap{
      white-space: nowrap;
@@ -294,9 +300,6 @@ display: flex;
   border-right:0;
 }
 
-.field-box input[type=range]{
-  width: auto;
-}
 
 
 #vars .field-box{
@@ -317,9 +320,29 @@ display: flex;
 clip: rect(0,0,0,0);
 }
 
+ .field-box .multiField{
+  display: flex;
+  flex-direction:row;
+  flex:1;
+  align-items:center;
+ }
+input.textSizeNumber{
+  width: 40px;
+  font-size: 12px;
+  font-family: tahoma;
+  line-height: 0.5;  
+
+}
+input.textSize{
+  
+  
+
+  flex:1 1 auto;
+}
+
  input.custom-checkbox ~ label{
   display: block;
-  padding: 5px 10px;
+  padding: 2px 6px;
   margin: 0;
   border: 1px solid #bebebe;
   background-image: -moz-linear-gradient(top,#fff, #d9d9d9);
@@ -330,6 +353,8 @@ clip: rect(0,0,0,0);
   color: #444;
   white-space: nowrap;
   text-shadow: 0 1px 0 #fff;
+  font-family: iranian sans,arial;
+  font-size: 14px;
 
 }
  input.custom-checkbox:checked ~ label{

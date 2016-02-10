@@ -1,15 +1,15 @@
 
-	
+   var ss = window.sessionStorage;	
   
 
-  changeSize();
+
 
 function changeSize() {
 
 	var testPanel = $('#TestPanel');
-    var ss = window.sessionStorage;
+ 
 	var size = $('.textSize', testPanel);
-	var size = $('.textSize', testPanel);
+	var sizeNumber = $('.textSizeNumber', testPanel);
 	var key = $(this).parent().attr('id');
 	var langs = $("input[name='lang']");
 	var lineType = $("input[name='linetype']");
@@ -20,22 +20,14 @@ function changeSize() {
 	var Blur = $('.blurRange')
 	var me = $('.me');
 
+
 	baseline.click(function(){
 		var res = $(this).prop('checked');
-		var _base = ss.getItem('TestPanel.baseline');
-		if(!res){
-			Box.removeClass('grid-line');
-			ss.setItem('TestPanel.baseline',false);
-		} else {
-			Box.addClass('grid-line') ;
-			ss.setItem('TestPanel.baseline',true);
-		}
-
-		
+		ss.setItem('TestPanel.baseline',res);
+		refresh()
 	})
 
 	lineType.click(function(){
-			
 			ss.setItem('TestPanel.lineType', $(this).val());	
 			refresh();
 	});
@@ -44,41 +36,38 @@ function changeSize() {
 		var f = [];
 		features.filter(':checked').each(function(){
 			f.push(  $(this).val() ) ;
-		
 		});
 		ss.setItem('TestPanel.features',f);
 		refresh();	
 	})
 	
-
-
 	me.on('keyup',function(){
 		var text = $(this).text();
 		ss.setItem('TestPanel.text',text);
 	})
 
-
-
-
 	size.on('input',function() {
 		var val = $(this).val();
+		ss.setItem('TestPanel.size',val);
+		refresh();
+	});
 
-	 ss.setItem('TestPanel.size',val);
-	 refresh();
+	sizeNumber.on('input',function() {
+		var val = $(this).val();
+		ss.setItem('TestPanel.size',val);
+		refresh();
 	});
 
 	Shadow.on('input',function() {
 		var val = $(this).val();
-
-	 ss.setItem('TestPanel.shadow',val);
-	 refresh();
+		ss.setItem('TestPanel.shadow',val);
+	 	refresh();
 	});
 
 	Blur.on('input',function() {
 		var val = $(this).val();
-
-	 ss.setItem('TestPanel.blur',val);
-	 refresh();
+		ss.setItem('TestPanel.blur',val);
+		refresh();
 	});
 
 	langs.change(function(){
@@ -97,23 +86,32 @@ function changeSize() {
 		 	var _blur = ss.getItem('TestPanel.blur') || 0;
 		 	var _text = ss.getItem('TestPanel.text') || 'متن دلخواه شما';
 		 	var _fea = ss.getItem('TestPanel.features') || "kern,liga";
-		 	var _base = Boolean(ss.getItem('TestPanel.baseline')) || false;
+		 	var _base = ss.getItem('TestPanel.baseline') || 'true';
+		 	var _scroll = ss.getItem('TestPanel.scroll')  || 0;
+
 		 	var textStyles = {}
 		 	//langs
 		 	 langs.filter('[value='+_lang+']').prop('checked', true);
-		 	 Box.find('.'+_lang).show().siblings().hide();
+		 	 Box.find('.'+_lang).addClass('show').siblings().removeClass('show');
 
-		 	 // set test
+		 	 // set test\
 		 	 me.text(_text);
 
 		 	 //set size
 
 		 	 size.prop('value',_size);
+		 	 sizeNumber.prop('value',_size);
 		 	 textStyles['font-size'] = _size+'px';
 		 	 //enable baseline grid
-		 	 if(_base) {
 
-		 	 	baseline.triggerHandler('click');
+		 	 	console.log(typeof _base,_base);
+		 	 if(_base =='true') {
+		 	 		Box.addClass('grid-line') ;
+		 	 	//baseline.prop('checked', true);
+		 	 	console.log('a');
+		 	 } else{
+		 	 	console.log('b');
+		 	 	Box.removeClass('grid-line') ;
 		 	 }
 
 		 	 _fea = _fea.split(',');
@@ -169,3 +167,19 @@ function changeSize() {
 }
 
 
+$(window).on('beforeunload', function(){
+    	 var scroll = $(".boxContainer")[0].scrollTop;
+    	 
+    			ss.setItem('TestPanel.scroll',scroll);
+	
+});
+
+$(window).on('load', function(){
+	  changeSize();
+	    	 var scroll = ss.getItem('TestPanel.scroll');
+
+	    	  $(".boxContainer")[0].scrollTop = scroll || 0;
+    	 
+    			
+
+});

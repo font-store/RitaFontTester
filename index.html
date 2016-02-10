@@ -19,15 +19,18 @@
            <span class="t2">ریــتـــا</span>
         </div>
         <div id="toolbox">
-            <a href="index.html">
+            <a href="index.html" class="active">
                     <img src="img/edit-icon.svg">
             </a>
-            <a href="kerning.html">
+              <span class="spilit"></span>
+            <a href="#">
                     <img src="img/kerning-icon.svg">
             </a>
-            <a href="learning.html">
+            <span class="spilit"></span>
+            <a href="#">
                     <img src="img/learning-icon.svg">
             </a>                          
+        </div>                         
         </div>
     </header>
 	<div id="container">
@@ -51,7 +54,7 @@
                         <input name="feature[]"  value="dlig" class="custom-checkbox features-input" id="dlig" type="checkbox">
                         <label for="dlig">لیگچر‌های اضافه</label>
                     </div>
-                    <div class="field-spiliter"></div>
+
                     <div class="field-box">
                         <input name="feature[]"  value="swsh" class="custom-checkbox features-input" id="swsh" type="checkbox">
                         <label for="swsh">کشیدگی‌ها</label>
@@ -80,36 +83,6 @@
                     </div>
 
                 </div>
-
-
-                <div  id="vars" class="side-row">
-                    
-                    <div class="field-box">
-                        <label>سایز</label>
-                        <input class="textSize" type="range" min="1" max="500" value="70" step="1">
-                    </div>
-                      <div class="field-spiliter"></div>
-                    <div class="field-box" style="flex:0 1 auto;">
-                        <label>سطوح خاکستری</label>
-                        <input class="shadow" type="range" min="0" max="20" value="0" step="0.5">
-                    </div>
-                    <div class="field-spiliter"></div>
-                    <div class="field-box" style="flex:0 1 auto;">
-                        <label>آسیتماتیک</label>
-                        <input class="blurRange" type="range" min="0" max="5" value="0" step="0.1">
-                    </div>
-                </div>
-
-
-            </div>
-                <div class="boxContainer ">
-                    <div id="TextContainer">
-                        <p class="fa">کلاغ فرز و چابک، ظهر هر روز با صدای ضخیم و عذاب‌ آورش، ب‍ه جستجوی یک مثقال گنج پنهان، در حیاط رژه می رفت و مژگانش که خواب از آن همچنان نپریده بود! معمار دوید و با شیرجه زنان به سمتش گریست و پرواز کرد با صدای خارچ و چروخ<p>
-                        <p class="ar">قَالَ عِيسَى بْنُ هِشَامٍ، فَانَلْتُهُ مَا تَاحَ. وَأَعْرَضَ عَنَّا فَرَاحَ. فَجَعَلْتُ أَنْفيهِ وَأُثْبتُهُ، وَأَنْكِرُهُ وَكَأَنِّي أَعْرِفُهُ، ثُمَّ دَلَّتْنِي عَلَيهِ ثَنَاياهُ، فَقُلْتُ: الإِسْكَنْدَريُّ وَاللَّهِ، فَقَدْ كَانَ فَارَقَنَا خِشْفًا، وَوَافانا جِلْفًا، وَنَهَضْتُ عَلى إِثرِهِ، ثَمَّ قَبَضْتُ عَلَى خَصْرِهِ، وَقُلْتُ: أَلَسْتَ أَبَا الفَتْحِ؟ أَلَمْ نُرَبِّكَ فِينا وَلِيدًا وَلَبِثْتَ فِينا مِنْ عُمُرِكَ سِنِينَ؟ فَأَيُّ عَجُوزِ لَكَ بِسُرَّ مَنْ رَا فَضَحِكَ إِليَّ وَقَالَ"</p>
-                        <p class="me" contenteditable=true>وارد کنید</p>                           
-                    </div>
-                </div>
-            <div class="side-bottom">
                 <div  id="changeLang" class="side-row">
                     <div class="field-box">
                         <input value="me" class="custom-checkbox" id="me" name="lang" type="radio">
@@ -132,8 +105,65 @@
                         <input value="pashto" class="custom-checkbox" id="pashto" name="lang" type="radio">
                         <label for="pashto">دشتو</label>
                     </div>
+                    <div class="field-spiliter"></div>
+                    <div class="field-box">
+                        <input value="test1" class="custom-checkbox" id="test1" name="lang" type="radio">
+                        <label for="test1">نقطه‌ها</label>
+                    </div>
     
                 </div>
+
+                <div  id="vars" class="side-row">
+                    
+                    <div class="field-box">
+                        <label>سایز</label>
+                        <div class="multiField">
+                        <input class="textSize" type="range" min="1" max="500" value="70" step="1">
+                        <input class="textSizeNumber" type="number" min="1" max="500" value="70" step="1">
+                        </div>
+                    </div>
+                      <div class="field-spiliter"></div>
+                    <div class="field-box" style="flex:0 1 auto;">
+                        <label>سطوح خاکستری</label>
+                        <input class="shadow" type="range" min="0" max="20" value="0" step="0.5">
+                    </div>
+                    <div class="field-spiliter"></div>
+                    <div class="field-box" style="flex:0 1 auto;">
+                        <label>آسیتماتیک</label>
+                        <input class="blurRange" type="range" min="0" max="5" value="0" step="0.1">
+                    </div>
+                </div>
+
+
+            </div>
+                <div class="boxContainer ">
+                    <div id="TextContainer">
+                        <p class="fa">بیشتر تاریخ‌دانان از ابن‌مقله به‌عنوان اولین مبتکر خوشنویسی اسلامی نام می‌برند و او را اولین کسی ذکر می‌کنند که کتابت را به یک هنر ارتقاء داد. در واقع ابن‌مقله با بررسی و نظام بخشیدن به خطوط مختلف رایج در زمان خود خطوط ششگانه را انتظام داد و به آنها هویت واقعی بخشید و برایشان قواعدی وضع کرد.
+
+ابن‌مقله وزیر خط محقق را از خط کوفی و نسخ قدیمی بیرون کشید و آن را قاعده‌مند کرد. سپس خط ریحان را ایجاد کرد. بعد از آن خط ثلث را از خط ریحان اخذ کرده و قاعده‌مند ساخت. بعد از آن‌ها به شکل‌دادن و منزه کردن خط نسخ پرداخت. ابن‌مقله قرآنی به خط نسخ نوشت و خطوط محقق و ریحانی و کوفی را در سر سوره‌ها قرار داد و هنگامی که خواست کتابت قرآن با سایر خطوط فرق داشته باشد خط توقیع را ابداع کرد.
+
+ابن مقله ۱۲ قاعده برای زیبایی خط تعیین کرد که به اصول دوازده‌گانه خوشنویسی معروفند و تاکنون، پس از گذشت بیش از ۱۰۰۰ سال، اعتبار خود را حفظ کرده‌اند. این قواعد عبارتند از: ترکیب، کرسی، نسبت، ضعف، قوت، سطح، دور، صعود مجاز، نزول مجاز، اصول، صفا و شأن.
+
+پس از ابن‌مقله افرادی چون محمد بن سمسانی و محمد بن اسعد شیوه او را فرا گرفتند و یک سده بعد، ابوالحسن علی بن هلال معروف به ابن بواب، این شیوه را از آن دو آموخت و تکمیل کرد و تمامی خطوطی که ابن‌مقله پدید آورده بود را کمال بخشید.<p>
+                        <p class="ar">قَالَ عِيسَى بْنُ هِشَامٍ، فَانَلْتُهُ مَا تَاحَ. وَأَعْرَضَ عَنَّا فَرَاحَ. فَجَعَلْتُ أَنْفيهِ وَأُثْبتُهُ، وَأَنْكِرُهُ وَكَأَنِّي أَعْرِفُهُ، ثُمَّ دَلَّتْنِي عَلَيهِ ثَنَاياهُ، فَقُلْتُ: الإِسْكَنْدَريُّ وَاللَّهِ، فَقَدْ كَانَ فَارَقَنَا خِشْفًا، وَوَافانا جِلْفًا، وَنَهَضْتُ عَلى إِثرِهِ، ثَمَّ قَبَضْتُ عَلَى خَصْرِهِ، وَقُلْتُ: أَلَسْتَ أَبَا الفَتْحِ؟ أَلَمْ نُرَبِّكَ فِينا وَلِيدًا وَلَبِثْتَ فِينا مِنْ عُمُرِكَ سِنِينَ؟ فَأَيُّ عَجُوزِ لَكَ بِسُرَّ مَنْ رَا فَضَحِكَ إِليَّ وَقَالَ"</p>
+                        <p class="me" contenteditable=true>وارد کنید</p> 
+                        <p class="test1">
+                        	<span>ث‍‍ ت‍ ن‍ ‍ - پ‍ ی‍ ي‍ ب‍ </span><br/>
+                        	<span>‍ثتنپیيب‍</span><br/>
+                        	<span>پپ بب تت ثث </span><br/>
+                        	<span>‍زز - ‍‍ژژ - ‍ذذ</span><br>
+                        	<span>ضضض‌ض</span><br/>
+                        	<span>ظظظ‌ظ</span><br/>
+                        	<span>خخخ‌خ</span><br/>
+                        	<span>ججج‌ج</span><br/>
+                        	<span>چچچ‌چ</span><br/>
+                        	<span>ششش‌ش</span><br/>
+                        	<span>ف‍‌‍‌ف ‍فقف ‍‍ق‌ق غغغ</span><br/>
+                        </p>                              
+                    </div>
+                </div>
+            <div class="side-bottom">
+
                 <div id="options" class="side-row">
                 
                     <div class="field-box">
