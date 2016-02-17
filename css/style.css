@@ -1,5 +1,64 @@
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+
+
 body{
-    background-color: #F2F2F2;
+    background-color: #bbb;
     color:rgb(74, 74, 74);
     font-size : 100%;
     line-height:100%;
@@ -7,20 +66,24 @@ body{
     display: flex;
 flex-direction: column;
 height: 100vh;
+overflow: hidden;
 }
 
+/************************************
 
-
+*************************************/
 #container{
     display: flex;
     flex-direction:column;
-    width:95%;
-    margin: 0 auto;
+    
+    
     font-family: TestFont , arial;
-  flex:1;
+  flex:1 1 auto;
+
 }
+/************************************
 
-
+*************************************/
 header{
     display:flex;
     flex-direction:row;
@@ -69,7 +132,7 @@ header #toolbox {
     display:block;
     position: relative;
     height: 100%;  
-    overflow: hidden;
+   
     width: 100%;
     text-align: center;
     
@@ -106,13 +169,55 @@ position: relative;
     height: 100%;
   }
 
+  #toolbox a span{
+    position: absolute;
+    background-color: red;
+    left: auto;
+    right: auto;
 
+    z-index: 10;
+    display: none;
+        bottom: 20;
+        height: 0;
+    font-family: Lalezar;
+    font-size: 24px;
+    line-height: 1;
+    height: 0px;
+    font-weight: 400px;
+    text-shadow: 1px 1px 3px #666;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 0 0 6px 6px;
+    border-left: 1px solid bisque;
+    border-right: 1px solid bisque;
+    border-bottom: 1px solid bisque;
+    overflow: hidden;
+      box-shadow: 0px 2px 4px 1px #999;
+        -webkit-animation-duration: 0.5s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+      -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+
+  }
+
+ #toolbox a:hover span{
+  display: block;
+-webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+        
+        height: auto;
+ }  
+/************************************
+
+*************************************/
 .UnitTest{
     background-color:#fefefe;
     
     box-shadow: 0px 2px 4px 1px #999;
-    padding:50px;
-    margin:50px 0%;
+    
+    margin-top:20px; 
             font-size : 1em;
         line-height:1.6em;
         flex:1;
@@ -184,7 +289,9 @@ position: relative;
      font-size:21px;
 }
 
+/************************************
 
+*************************************/
 #FarsiPanel{
 
 }
@@ -209,16 +316,18 @@ label{
   padding: 20px  30px;
   min-height: 200px;
   display: flex;
-
-  flex:1;
-  flex-basis:1;
-//  overflow: auto;
+  position: relative;
+  flex:1 1 0;
+  flex-flow:wrap;
+  overflow: auto;
     box-shadow: 0px 0px 14px -3px #aaa inset;
   
 }
 #TextContainer {
   flex:1;
   display: flex;
+  position: relative;
+  
 }
 
 #TextContainer > p{
@@ -230,6 +339,8 @@ label{
     line-height: 1.6em;
     text-rendering:optimizelegibility;
   position: relative;
+  word-wrap: break-word;
+word-break: normal;
 }
 
 #TextContainer .show{

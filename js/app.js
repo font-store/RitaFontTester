@@ -20,6 +20,24 @@ function changeSize() {
 	var Blur = $('.blurRange')
 	var me = $('.me');
 
+	$(document).bind('keydown', 'ctrl+]', function(){
+		var val = ss.getItem('TestPanel.size');
+		val = parseInt(val) +5;
+		ss.setItem('TestPanel.size',val);
+		
+		refresh();
+
+	});
+
+
+	$(document).bind('keydown', 'ctrl+[', function(){
+		let val = size.val();
+		val = val -5;
+		ss.setItem('TestPanel.size',val);
+		refresh();
+
+	});
+
 
 	baseline.click(function(){
 		var res = $(this).prop('checked');
@@ -42,8 +60,10 @@ function changeSize() {
 	})
 	
 	me.on('keyup',function(){
-		var text = $(this).text();
+		var text = $(this).html();
+	
 		ss.setItem('TestPanel.text',text);
+		
 	})
 
 	size.on('input',function() {
@@ -95,7 +115,7 @@ function changeSize() {
 		 	 Box.find('.'+_lang).addClass('show').siblings().removeClass('show');
 
 		 	 // set test\
-		 	 me.text(_text);
+		 	 me.html(_text);
 
 		 	 //set size
 
@@ -104,13 +124,13 @@ function changeSize() {
 		 	 textStyles['font-size'] = _size+'px';
 		 	 //enable baseline grid
 
-		 	 	console.log(typeof _base,_base);
+
 		 	 if(_base =='true') {
 		 	 		Box.addClass('grid-line') ;
 		 	 	//baseline.prop('checked', true);
-		 	 	console.log('a');
+
 		 	 } else{
-		 	 	console.log('b');
+
 		 	 	Box.removeClass('grid-line') ;
 		 	 }
 
@@ -137,16 +157,21 @@ function changeSize() {
 			langs.filter('[value='+_lineType+']').prop('checked', true);
 			Box.find('p').css('white-space', _lineType);
 		 		textStyles['-webkit-filter'] = "initial";
+		 		textStyles['color'] = '#4a4a4a';
 		 	if(_shadow != 0 ){
 		 		
-		 		var shadowBlur = _shadow;
-		 		if(_shadow >= 10){
-		 			shadowBlur = 20;
+		 		var shadowBlur = _shadow *(_size /50);
+		 		var pos =  _shadow *(_size /100) ;
+		 		var shadowColler = "#333";
+		 		if(shadowBlur < 5){
+		 			//shadowBlur =  5;
 		 		}	
-		 		textStyles['text-shadow'] = `0px ${_shadow /2 }px  ${shadowBlur}px #000, 
-		 			${_shadow }px 0px  ${shadowBlur}px #000,
-		 			0px -${_shadow }px  ${shadowBlur}px #000,
-		 			-${_shadow }px 0px ${shadowBlur}px #000`;
+
+		 		textStyles['text-shadow'] = `0px ${pos  }px  ${shadowBlur}px ${shadowColler}, 
+		 			${pos  }px 0px  ${shadowBlur}px ${shadowColler},
+		 			0px -${pos }px  ${shadowBlur}px ${shadowColler},
+		 			-${pos }px 0px ${shadowBlur}px ${shadowColler}`;
+		 			textStyles['color'] = '#fff';
 		 	} 
 		 		
 		 	
