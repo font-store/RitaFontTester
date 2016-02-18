@@ -20,6 +20,10 @@ function changeSize() {
 	var Blur = $('.blurRange')
 	var me = $('.me');
 
+
+/*
+Hotkey Evenets
+*/
 	$(document).bind('keydown', 'ctrl+]', function(){
 		var val = ss.getItem('TestPanel.size');
 		val = parseInt(val) +5;
@@ -29,13 +33,11 @@ function changeSize() {
 
 	});
 
-
 	$(document).bind('keydown', 'ctrl+[', function(){
 		let val = size.val();
 		val = val -5;
 		ss.setItem('TestPanel.size',val);
 		refresh();
-
 	});
 
 
