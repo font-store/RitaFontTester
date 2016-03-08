@@ -1,13 +1,13 @@
 	@font-face {
 	    font-family: 'TestFont';
-	    src: url('Font-Regular.woff') format('woff');
+	    src: url('Font-Regular.ttf') format('truetype');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	
 	@font-face {
 	    font-family: 'TestFont';
-	    src: url('Font-Bold.woff') format('woff');
+	    src: url('Font-Bold.ttf') format('truetype');
 	    font-weight: bold;
 	    font-style: normal;
 	}
