@@ -64,9 +64,9 @@ body{
     line-height:100%;
     margin:0px;
     display: flex;
-flex-direction: column;
-height: 100vh;
-overflow: hidden;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /************************************
@@ -77,7 +77,7 @@ overflow: hidden;
     flex-direction:column;
     
     
-    font-family: TestFont , arial;
+    font-family: TestWeb , arial;
   flex:1 1 auto;
 
 }
@@ -217,7 +217,7 @@ position: relative;
     
     box-shadow: 0px 2px 4px 1px #999;
     
-    margin-top:20px; 
+    
             font-size : 1em;
         line-height:1.6em;
         flex:1;
