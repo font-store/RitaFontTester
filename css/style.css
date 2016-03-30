@@ -327,6 +327,7 @@ label{
   flex:1;
   display: flex;
   position: relative;
+
   
 }
 
@@ -345,8 +346,18 @@ word-break: normal;
 
 #TextContainer .show{
   flex:1;
+  display: table;
+height: 100%;
   display: block;
 }
+
+#TextContainer.grid-line .show{
+  background-color: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, .09) 1px, transparent 1px);
+  background-size: 100% 1.6em;
+  background-position: 0 1.05em;
+}
+
 .nowrap{
      white-space: nowrap;
 }
@@ -479,25 +490,6 @@ input.textSize{
 }
 
 
-
-.grid-line {position:relative;}
-.grid-line:after {
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 9999;
-  content: '';
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: transparent;
-  background-image: linear-gradient(rgba(0, 0, 0, .05) 1px, transparent 1px);
-  background-size: 100% 1.6em;
-  background-position: 0 0.95em;
-}
 
 
 .field-spiliter{
