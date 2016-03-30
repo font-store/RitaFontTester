@@ -84,7 +84,7 @@ body{
     flex-direction:column;
     
     
-    font-family: TestWeb , arial;
+    font-family: TestFont , arial;
   flex:1 1 auto;
 
 }
@@ -305,7 +305,7 @@ position: relative;
 
 
 label{
-  font-family: tahoma;
+  font-family: IranianSans3;
   font-size: 14px;
     margin: 0 10px;
 }
@@ -482,7 +482,7 @@ input.textSize{
   color: #444;
   white-space: nowrap;
   text-shadow: 0 1px 0 #fff;
-  font-family: iranian sans,arial;
+  font-family: IranianSans3,arial;
   font-size: 14px;
 
 }
@@ -515,11 +515,26 @@ input.textSize{
 }
 
 
+footer{
+    font-family:IranianSans3;
+    text-align:center;
+    padding:5px;
+}
+
+footer p{
+    margin:0;
+    font-size:12px;
+    color:#000;
+}
+
+footer p a{
+    color:#3c4ead;
+}
 
 
   @font-face {
-      font-family: 'Lalezar';
-      src: url('Lalezar-Display.woff') format('woff');
+      font-family: 'IranianSans3';
+      src: url('IranianSans3-regular.woff') format('woff');
       font-weight: normal;
       font-style: normal;
   }
