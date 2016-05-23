@@ -1,3 +1,19 @@
+  @font-face {
+      font-family: 'Lalezar';
+      src: url('Lalezar-Display.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'WebBehdad';
+      src: url('Behdad-Regular.woff2') format('woff2'),
+      url('Behdad-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -177,13 +193,13 @@ position: relative;
 
     z-index: 10;
     display: none;
-        bottom: 20;
+        bottom: 20px;
         height: 0;
     font-family: Lalezar;
     font-size: 24px;
     line-height: 1;
     height: 0px;
-    font-weight: 400px;
+    font-weight: 400;
     text-shadow: 1px 1px 3px #666;
     color: #fff;
     padding: 5px 10px;
@@ -449,7 +465,7 @@ clip: rect(0,0,0,0);
   align-items:center;
  }
 input.textSizeNumber{
-  width: 40px;
+  width: 50px;
   font-size: 12px;
   font-family: tahoma;
   line-height: 0.5;  
@@ -475,7 +491,7 @@ input.textSize{
   color: #444;
   white-space: nowrap;
   text-shadow: 0 1px 0 #fff;
-  font-family: iranian sans,arial;
+  font-family: WebBehdad;
   font-size: 14px;
 
 }
@@ -510,9 +526,5 @@ input.textSize{
 
 
 
-  @font-face {
-      font-family: 'Lalezar';
-      src: url('Lalezar-Display.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  }
+
+  
