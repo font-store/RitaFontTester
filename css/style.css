@@ -83,8 +83,22 @@ body{
 flex-direction: column;
 height: 100vh;
 overflow: hidden;
+
 }
 
+body *{
+     -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+#TextContainer p.show {
+     -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+    
+}    
 /************************************
 
 *************************************/
@@ -109,6 +123,9 @@ header{
     position: relative;
     box-shadow: 0px 2px 4px 1px #999;
 }
+.ISFullScreen header{
+   display:none;
+}    
 
 header .logobox{
     background: #ff007e;
@@ -240,6 +257,9 @@ position: relative;
     
 }
 
+.ISFullScreen .UnitTest{
+        margin:0;
+}
 .UnitTest.hide{
   display: none;
 
@@ -353,7 +373,7 @@ label{
 
   margin: 0px;
   padding: 0px 20px;
-    line-height: 1.6em;
+    line-height: 1.7em;
     text-rendering:optimizelegibility;
   position: relative;
   word-wrap: break-word;
@@ -361,17 +381,17 @@ word-break: normal;
 }
 
 #TextContainer .show{
-  flex:1;
+  flex:1 1 auto ;
+ width:calc( 100% - 20px);  
   display: table;
-height: 100%;
-  display: block;
 }
 
-#TextContainer.grid-line .show{
+ p.grid-line {
   background-color: transparent;
-  background-image: linear-gradient(rgba(0, 0, 0, .09) 1px, transparent 1px);
-  background-size: 100% 1.6em;
+  background-image: linear-gradient(rgba(6, 35, 116, 0.16) 0px, transparent 1px);
+  background-size: 100% 1.7em;
   background-position: 0 1.05em;
+  background-attachment: scroll;
 }
 
 .nowrap{
@@ -486,13 +506,13 @@ input.textSize{
   background-image: -moz-linear-gradient(top,#fff, #d9d9d9);
   background-image: -webkit-linear-gradient(top, #fff, #d9d9d9);
   text-align: center;
-  line-height: 28px;
+  line-height: 20px;
   cursor: pointer;
   color: #444;
   white-space: nowrap;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 1px #fff;
   font-family: WebBehdad;
-  font-size: 14px;
+  font-size: 11px;
 
 }
  input.custom-checkbox:checked ~ label{
