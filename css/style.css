@@ -1,4 +1,11 @@
-  @font-face {
+@charset "UTF-8";
+/*!
+ *
+ * Published under MIT License.
+ * Designed and Developed by Saleh Souzanchi (saleh.souzanchi@gmail.com)
+ */
+ 
+@font-face {
       font-family: 'Lalezar';
       src: url('Lalezar-Display.woff') format('woff');
       font-weight: normal;
@@ -87,16 +94,16 @@ overflow: hidden;
 }
 
 body *{
-     -moz-user-select: none;
+  /*    -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
+  -ms-user-select: none; */
 }
 
 
-#TextContainer p.show {
-     -moz-user-select: all;
-  -webkit-user-select: all;
-  -ms-user-select: all;
+#TextContainer,#TextContainer p.show {
+     -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
     
 }    
 /************************************
@@ -360,9 +367,12 @@ label{
   
 }
 #TextContainer {
-  flex:1;
-  display: flex;
-  position: relative;
+flex: 1 1 0;
+display: flex;
+position: relative;
+flex-wrap: wrap;
+min-width: 100%;
+flex-direction: row;
 
   
 }
@@ -386,11 +396,16 @@ word-break: normal;
   display: table;
 }
 
+
+#TextContainer > p span{
+  display:block;  
+}
+
  p.grid-line {
   background-color: transparent;
   background-image: linear-gradient(rgba(6, 35, 116, 0.16) 0px, transparent 1px);
   background-size: 100% 1.7em;
-  background-position: 0 1.05em;
+  background-position: 0 1.095em;
   background-attachment: scroll;
 }
 

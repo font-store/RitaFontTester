@@ -219,18 +219,22 @@ $(window).on('beforeunload', function(){
 $(document).ready(function() {
      checkFullScreen() 
     
-    var scroll = ss.getItem('TestPanel.scroll');
-   $(".boxContainer")[0].scrollTop = scroll || 0;
+  
 });
 
 $(window).on('load', function(){
 	  changeSize();
-	  
+	    var scroll = ss.getItem('TestPanel.scroll');
+   $(".boxContainer")[0].scrollTop = scroll || 0;
 });
+
+var isFullscreen = function(){
+    return (window.outerWidth === screen.width && window.outerHeight === screen.height); 
+ };
 
 
 function checkFullScreen(){
-    if((window.outerWidth-screen.width) ==0 && (window.outerHeight-screen.height) ==0 )
+    if(isFullscreen())
     {
         $('body').addClass('ISFullScreen');
         return;
