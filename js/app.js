@@ -140,7 +140,7 @@ Hotkey Evenets
 
 		 	 } else{
 
-		 	 	Box.removeClass('grid-line') ;
+		 	 	Box.children('p').removeClass('grid-line') ;
 		 	 }
              
              // if(_full =='true') {
