@@ -1,7 +1,9 @@
 
    var ss = window.sessionStorage;	
   
-
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+  });
 
 
 function changeSize() {
@@ -43,7 +45,7 @@ Hotkey Evenets
     fullScreen.click(function(){
         let res = $(this).prop('checked');
 		ss.setItem('TestPanel.fullscreen',res);
-		refresh()
+		checkFullScreen();
     });
 
 	baseline.click(function(){
@@ -143,12 +145,14 @@ Hotkey Evenets
 		 	 	Box.children('p').removeClass('grid-line') ;
 		 	 }
              
-             // if(_full =='true') {
-		 	 		// launchFullscreen(testPanel[0]);
-		 	 //	baseline.prop('checked', true);
-                 // console.log(_full);
+  	 	 if(_base =='true') {
+		 	 		fullScreen.prop('checked',true) ;
+		 	 	
 
-             // }
+		 	 } else{
+
+		 	 		fullScreen.prpp('checked',false) ;
+		 	 }
            
 
 		 	 _fea = _fea.split(',');
@@ -219,17 +223,23 @@ $(window).on('beforeunload', function(){
 $(document).ready(function() {
      checkFullScreen() 
     
-  
+    console.log("1111");
 });
 
 $(window).on('load', function(){
+
 	  changeSize();
 	    var scroll = ss.getItem('TestPanel.scroll');
    $(".boxContainer")[0].scrollTop = scroll || 0;
 });
 
 var isFullscreen = function(){
-    return (window.outerWidth === screen.width && window.outerHeight === screen.height); 
+			      _full = ss.getItem('TestPanel.fullscreen') ;
+				  if (_full =="true"){
+					  return true;
+				  }
+				  return false;
+                       
  };
 
 
