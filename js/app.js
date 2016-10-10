@@ -4,6 +4,9 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
   });
+   document.execCommand('selectAll', function(event) {
+    console.log("started");
+  });
 
 
 function changeSize() {
@@ -26,6 +29,11 @@ function changeSize() {
 /*
 Hotkey Evenets
 */
+	$(document).bind('keydown', 'ctrl+a', function(){
+		var xxx = $('p.show',Box).focus();
+		console.log(xxx);
+
+	});
 	$(document).bind('keydown', 'ctrl+]', function(){
 		var val = ss.getItem('TestPanel.size');
 		val = parseInt(val) +5;
@@ -223,7 +231,7 @@ $(window).on('beforeunload', function(){
 $(document).ready(function() {
      checkFullScreen() 
     
-    console.log("1111");
+
 });
 
 $(window).on('load', function(){
