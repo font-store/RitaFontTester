@@ -566,3 +566,20 @@ input.textSize{
 
 
   
+footer{
+    font-family:tahoma;
+	
+    text-align:center;
+    padding:5px;
+}
+
+footer p{
+    margin:0;
+    font-size:10px;
+    color:#000;
+}
+
+footer p a{
+    color:#3c4ead;
+	text-decoration:none;
+}
